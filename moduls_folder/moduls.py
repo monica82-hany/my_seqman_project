@@ -18,5 +18,5 @@ def GCcount(fastafile):
     gc_continer={}
     for header, seq in fastafile.items():
         gc_continer[header]=(seq.count("G")+ seq.count("c")/len(seq))
-    return gc_continer
+    return gc_continertiner
 
