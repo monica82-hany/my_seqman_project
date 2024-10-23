@@ -1,5 +1,3 @@
-inputFile = ""
-with open (inputFile,"r") as f:
-    for line in f :
-        print(line)
-    
+inputFile = "exampledata/aamutiline.fasta"
+from moduls import fastaread
+file = fastaread(inputFile)  
