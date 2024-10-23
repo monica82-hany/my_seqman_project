@@ -17,6 +17,6 @@ def fastaread(fastafile):
 def GCcount(fastafile):
     gc_continer={}
     for header, seq in fastafile.items():
-        gc_continer[header]=(seq.count("G")+ seq.count("c")/len(seq))
-    return gc_continertiner
+        gc_continer[header]=(seq.count("G")+ seq.count("C")/len(seq))
+    return gc_continer
 
