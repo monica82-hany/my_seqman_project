@@ -1,6 +1,6 @@
 def fastaread(fastafile):
     seqs={}
-    with open (inputFile,"r") as f:
+    with open (fastafile,"r") as f:
         header=None
         for line in f :
             line=line.strip()
@@ -12,4 +12,11 @@ def fastaread(fastafile):
             else:
                 seqs[header]+=line
 
-    return(seqs)
+    return seqs
+
+def GCcount(fastafile):
+    gc_continer={}
+    for header, seq in fastafile.items():
+        gc_continer[header]=(seq.count("G")+ seq.count("c")/len(seq))
+    return gc_continer
+
